@@ -1,0 +1,76 @@
+{
+  "holdings": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "type": "stock",
+      "value": "$1000"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "type": "stock",
+      "value": "$1200"
+    },
+    {
+      "ticker": "BTC",
+      "name": "Bitcoin",
+      "type": "crypto",
+      "value": "$100"
+    },
+    {
+      "ticker": "ETH",
+      "name": "Ethereum",
+      "type": "crypto",
+      "value": "$2000"
+    },
+    {
+      "ticker": "10YR",
+      "name": "10 Year Bond",
+      "type": "bonds",
+      "value": "$400"
+    },
+    {
+      "ticker": "20YR",
+      "name": "20 Year Bond",
+      "type": "bonds",
+      "value": "$10000"
+    },
+    {
+      "ticker": "BAYC",
+      "name": "Bored Ape Yacht Club",
+      "type": "nft",
+      "value": "$8000"
+    },
+    {
+      "ticker": "SMB",
+      "name": "Solana Monkey Business",
+      "type": "stock",
+      "value": "$2000"
+    },
+    {
+      "ticker": "JOE",
+      "name": "Trader Joe",
+      "type": "defi",
+      "value": "$3000"
+    },
+    {
+      "ticker": "OHM",
+      "name": "Olympus",
+      "type": "defi",
+      "value": "$500"
+    },
+    {
+      "ticker": "FUNDRISE",
+      "name": "Fundrise",
+      "type": "real_estate",
+      "value": "$8000"
+    },
+    {
+      "ticker": "CONCREIT",
+      "name": "Concreit",
+      "type": "real_estate",
+      "value": "$1500"
+    }
+  ]
+}
