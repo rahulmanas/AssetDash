@@ -152,7 +152,7 @@ function App() {
               })}
             </select>
           </div>
-          <table>
+          <table id="resultTable">
             <thead>
               <tr>
                 <th>Name</th>

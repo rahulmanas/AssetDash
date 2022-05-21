@@ -52,6 +52,14 @@ td {
   display: flex;
   justify-content: space-between;
 }
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+#resultTable td, #resultTable th {
+  border: 1px solid black;
+}
+#resultTable tr:hover {background-color: #ddd;}
 
 .selectField {
   height: fit-content;
