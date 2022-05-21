@@ -96,8 +96,8 @@ function App() {
   useEffect(() => {
     fetch('mock_api.json').then(response =>  response.json()).then((json) => {
       console.log(json, "json data");
-      json.holdings.map((data) => {
-        data.value = parseFloat(data.value.split("$")[1])
+      json && json.holdings && json.holdings.length > 0 && json.holdings.map((data) => {
+        return data.value = parseFloat(data.value.split("$")[1])
       })
       setHoldings(json.holdings);
     });
