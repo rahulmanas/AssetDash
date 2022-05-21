@@ -60,11 +60,13 @@ function PieChart({results}) {
         }
     }
   }
+  const sum = results.reduce((acc, curr) => acc + curr.value, 0);
   return (
     <>
       <div className="pieChart">
         <p className='portfolio'>Portfolio Chart</p>
         <Pie data={data} options={option}/>
+        <p className='totalVal'>${sum}</p>
       </div>
     </>
   )
