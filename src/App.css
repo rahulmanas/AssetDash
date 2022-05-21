@@ -56,8 +56,15 @@ tr:nth-child(even) {
   background-color: lightgray;
 }
 
-#resultTable td, #resultTable th {
-  border: 1px solid black;
+#resultTable {
+  background-color: #ffffff; filter: alpha(opacity=40); opacity: 0.95;border:1px black solid;
+}
+table { border-collapse: collapse; }
+th { border-right: solid 1px black; 
+  border-left: solid 1px black; }
+td {
+  border-right: solid 1px black; 
+  border-left: solid 1px black;
 }
 #resultTable tr:hover {background-color: #ddd;}
 
