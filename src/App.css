@@ -68,6 +68,10 @@ td {
 }
 #resultTable tr:hover {background-color: #ddd;}
 
+.tableInfo {
+  overflow: scroll;
+}
+
 .selectField {
   height: fit-content;
   padding: 4px;
@@ -113,5 +117,26 @@ td {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bodyInfo {
+    display: block;
+  }
+  .container {
+    padding: 0 2rem;
+  }
+  .portfolio {
+    font-size: 18px;
+  }
+  .headInfo {
+    display: block;
+  }
+  .searchField {
+    margin-top: 1rem;
+  }
+  .headingTitle {
+    font-size: 24px;
   }
 }

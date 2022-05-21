@@ -135,7 +135,6 @@ function App() {
     <div className="App container">
       <div className='headInfo'>
         <div className="headingTitle">AssetDash Portfolio Tracker</div>
-        <i className="fa fa-user icon"></i>
         <input type="text" className='searchField' placeholder='Search By User ID' onChange={event => setQuery(event.target.value)} />
       </div>
       <div className='bodyInfo'>
@@ -152,19 +151,21 @@ function App() {
               })}
             </select>
           </div>
-          <table id="resultTable">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Ticker</th>
-                <th>Percentage(%)</th>
-                <th>Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              <TableData results={computedResults}  />
-            </tbody>
-          </table>
+          <div className='tableInfo'>
+            <table id="resultTable">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Ticker</th>
+                  <th>Percentage(%)</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <TableData results={computedResults}  />
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
