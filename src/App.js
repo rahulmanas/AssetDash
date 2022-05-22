@@ -95,32 +95,40 @@ function App() {
   const [query, setQuery] = useState("");
   const [options, setOptions] = useState("");
 
+  // useEffect(() => {
+  //   const url = `https://624760d3229b222a3fcc6155.mockapi.io/api/v1/portfolio/1`;
+  //   fetch(url).then(response =>  response.json()).then((json) => {
+  //     console.log(json, "json data");
+  //     // json && json.holdings && json.holdings.length > 0 && json.holdings.map((data) => {
+  //     //   return data.value = parseFloat(data.value.split("$")[1])
+  //     // })
+  //     setHoldings(json.holdings);
+  //   });
+  // }, []);
+
   useEffect(() => {
-    fetch('https://624760d3229b222a3fcc6155.mockapi.io/api/v1/portfolio/2').then(response =>  response.json()).then((json) => {
+    const url = `https://624760d3229b222a3fcc6155.mockapi.io/api/v1/portfolio/${query ? query : 1}`;
+    fetch(url).then(response =>  response.json()).then((json) => {
       console.log(json, "json data");
       // json && json.holdings && json.holdings.length > 0 && json.holdings.map((data) => {
       //   return data.value = parseFloat(data.value.split("$")[1])
       // })
       setHoldings(json.holdings);
     });
-  }, []);
+  }, [query]);
 
   useEffect(() => {
     const results = holdings && holdings.filter(holding => {
-      if (query === '' && options === '') {
+      if (options === '') {
         return holding;
-      } else if(query && options && (holding.type.toLowerCase().includes(options.toLowerCase()) && holding.name.toLowerCase().includes(query.toLowerCase()) )) {
-        return holding;
-      } else if(options && !query && holding.type.toLowerCase().includes(options.toLowerCase())) {
-        return holding;
-      } else if (query.toLowerCase() && !options && holding.name.toLowerCase().includes(query.toLowerCase())) {
+      } else if(options && (holding.type.toLowerCase().includes(options.toLowerCase()) )) {
         return holding;
       } else {
         return null;
       }
     });
     setComputedResults(results);
-  }, [holdings, query, options]);
+  }, [holdings, options]);
 
   const uniqueObjArray = [...new Map(holdings.map((item) => [item["type"], item])).values()];
   console.log(uniqueObjArray, "uniqueObjArray");
