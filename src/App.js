@@ -96,11 +96,11 @@ function App() {
   const [options, setOptions] = useState("");
 
   useEffect(() => {
-    fetch('mock_api.json').then(response =>  response.json()).then((json) => {
+    fetch('https://624760d3229b222a3fcc6155.mockapi.io/api/v1/portfolio/2').then(response =>  response.json()).then((json) => {
       console.log(json, "json data");
-      json && json.holdings && json.holdings.length > 0 && json.holdings.map((data) => {
-        return data.value = parseFloat(data.value.split("$")[1])
-      })
+      // json && json.holdings && json.holdings.length > 0 && json.holdings.map((data) => {
+      //   return data.value = parseFloat(data.value.split("$")[1])
+      // })
       setHoldings(json.holdings);
     });
   }, []);
